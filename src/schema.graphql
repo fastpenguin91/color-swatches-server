@@ -1,0 +1,13 @@
+type Query {
+  colors(filter: String, skip: Int, first: Int): [Color!]!
+  color(id: ID, colorID: ID): Color
+}
+
+type Color {
+    id: ID!
+    color_code: String!
+}
+
+type Mutation {
+    setColor(color_code: String!): Color!
+}
